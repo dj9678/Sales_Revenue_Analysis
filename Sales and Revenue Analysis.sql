@@ -67,7 +67,8 @@ order by category_name, product_sales desc;
 
 /********************************************************************
 Monthly cumulative sales and same-quarter monthly cumulative sales
-********************************************************************/with 
+********************************************************************/
+with 
 temp_01 as (
 select date_trunc('month', "OrderDate")::date as month_day
 	, sum("Amount") as total_amount
